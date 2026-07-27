@@ -22,7 +22,9 @@ Clone the repo.
 Run npm install.
 Create a .env.local file and add your Groq API key: GROQ_API_KEY=your_key_here
 Run npm run dev and open http://localhost:3000.
-Save the file. Then push it to GitHub:
+Save the file. 
+
+Then push it to GitHub:
 
 bash
 
