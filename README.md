@@ -12,8 +12,11 @@ The AI returns a 3-sentence summary of the developer, which is shown on the page
 Tech Stack
 
 Next.js (App Router)
+
 Tailwind CSS
+
 GitHub Public API
+
 Groq AI (OpenAI SDK)
 
 How to run locally
@@ -29,5 +32,7 @@ Then push it to GitHub:
 bash
 
 git add .
+
 git commit -m "M4: Add README"
+
 git push
