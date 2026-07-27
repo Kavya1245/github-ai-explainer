@@ -16,7 +16,6 @@ Next.js (App Router)
 Tailwind CSS
 
 GitHub Public API
-
 Groq AI (OpenAI SDK)
 
 How to run locally
