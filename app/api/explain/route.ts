@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import OpenAI from "openai";
+import { formatGithubData } from "../../utils"; // Imported the testable function
 
 export async function POST(request: Request) {
   try {
@@ -41,15 +42,12 @@ export async function POST(request: Request) {
 
     const explanation = aiResponse.choices[0].message.content;
 
-    // 5. Send the AI's answer back to the user
+    // 5. Format the raw data using our testable utility function
+    const formattedData = formatGithubData(githubData);
+
+    // 6. Send the AI's answer and formatted data back to the user
     return NextResponse.json({ 
-      rawGitHubData: {
-        name: githubData.name,
-        bio: githubData.bio,
-        publicRepos: githubData.public_repos,
-        followers: githubData.followers,
-        avatar: githubData.avatar_url
-      },
+      rawGitHubData: formattedData,
       aiExplanation: explanation
     });
 
